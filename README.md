@@ -1,4 +1,4 @@
-# 🚀 RAG PDF Question Answering System
+#  RAG PDF Question Answering System
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![LangChain](https://img.shields.io/badge/LangChain-Framework-green)
@@ -48,7 +48,7 @@ Instead of sending the entire document to a model, this system retrieves only th
 
 ## 📌 Example Query
 
-
+What is the Transformer architecture?
 
 ---
 
@@ -67,20 +67,10 @@ Returns the most relevant sections from the document related to the query.
 
 ---
 
-## 🔮 Future Improvements
 
-- Add LLM for generating final answers  
-- Build UI using Streamlit or Gradio  
-- Support multiple documents  
-
----
 
 ## 👩‍💻 Author
 
 **Bani Kaur**
 
----
 
-## ⭐ If you like this project
-
-Give it a ⭐ on GitHub!
