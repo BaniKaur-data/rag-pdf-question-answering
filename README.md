@@ -20,17 +20,17 @@ To build a system that can understand documents and retrieve contextually releva
 
 ---
 
-## ⚙️ How It Works
+##  How It Works
 
-1. 📥 Load PDF document  
-2. ✂️ Split text into smaller chunks  
-3. 🔢 Convert text into embeddings  
-4. 🧠 Store embeddings in FAISS vector database  
-5. 🔍 Retrieve relevant chunks based on query  
+1.  Load PDF document  
+2.  Split text into smaller chunks  
+3.  Convert text into embeddings  
+4.  Store embeddings in FAISS vector database  
+5.  Retrieve relevant chunks based on query  
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - Python  
 - LangChain  
@@ -40,25 +40,25 @@ To build a system that can understand documents and retrieve contextually releva
 
 ---
 
-## 💡 Key Concept
+##  Key Concept
 
 Instead of sending the entire document to a model, this system retrieves only the most relevant parts using **semantic search (vector similarity)**.
 
 ---
 
-## 📌 Example Query
+## Example Query
 
 What is the Transformer architecture?
 
 ---
 
-## 📈 Output
+##  Output
 
 Returns the most relevant sections from the document related to the query.
 
 ---
 
-## 🚀 Features
+##  Features
 
 - Efficient document retrieval  
 - Semantic search using embeddings  
@@ -69,7 +69,7 @@ Returns the most relevant sections from the document related to the query.
 
 
 
-## 👩‍💻 Author
+##  Author
 
 **Bani Kaur**
 
