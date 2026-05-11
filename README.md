@@ -1,76 +1,124 @@
-#  RAG PDF Question Answering System
+# RAGDoc Assistant
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![LangChain](https://img.shields.io/badge/LangChain-Framework-green)
 ![FAISS](https://img.shields.io/badge/FAISS-VectorDB-orange)
-![HuggingFace](https://img.shields.io/badge/Embeddings-HuggingFace-yellow)
+![Groq](https://img.shields.io/badge/Groq-LLM-red)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
 ---
 
-##  Overview
+# Overview
 
-This project demonstrates a **Retrieval-Augmented Generation (RAG)** pipeline for extracting relevant information from unstructured PDF documents.
+RAGDoc Assistant is a Retrieval-Augmented Generation (RAG) system designed for intelligent question answering over PDF documents using Large Language Models (LLMs).
 
----
+The application retrieves contextually relevant document chunks using semantic vector search and generates grounded responses using a Groq-hosted Llama 3.3 model.
 
-## Objective
-
-To build a system that can understand documents and retrieve contextually relevant information based on user queries using vector similarity search.
-
----
-
-##  How It Works
-
-1.  Load PDF document  
-2.  Split text into smaller chunks  
-3.  Convert text into embeddings  
-4.  Store embeddings in FAISS vector database  
-5.  Retrieve relevant chunks based on query  
+The system also includes:
+- Source citations with page references
+- Prompt-based guardrails to reduce hallucinations
+- Context-grounded answer generation
+- Semantic document retrieval using FAISS vector database
 
 ---
 
-##  Tech Stack
+# Features
 
-- Python  
-- LangChain  
-- FAISS (Vector Database)  
-- HuggingFace Embeddings  
-- Google Colab  
-
----
-
-##  Key Concept
-
-Instead of sending the entire document to a model, this system retrieves only the most relevant parts using **semantic search (vector similarity)**.
+- PDF-based Question Answering
+- Retrieval-Augmented Generation (RAG)
+- Semantic Search using Embeddings
+- LLM-Powered Response Generation
+- Source Citations with Page Numbers
+- Prompt-Based Hallucination Guardrails
+- FAISS Vector Database Integration
+- Groq API + Llama 3.3 Integration
 
 ---
 
-## Example Query
+# Tech Stack
 
+- Python
+- LangChain
+- FAISS
+- HuggingFace Embeddings
+- Groq API
+- Llama 3.3 70B Versatile
+- PyPDFLoader
+- Google Colab
+
+---
+
+# System Architecture
+
+```text
+PDF Document
+      ↓
+Text Chunking
+      ↓
+Vector Embeddings
+      ↓
+FAISS Vector Database
+      ↓
+Semantic Retrieval
+      ↓
+LLM (Groq-hosted Llama 3.3)
+      ↓
+Grounded Answer + Citations
+```
+
+---
+
+# How It Works
+
+1. Upload PDF document
+2. Split document into smaller chunks
+3. Convert chunks into vector embeddings
+4. Store embeddings inside FAISS vector database
+5. Retrieve relevant chunks using semantic similarity
+6. Pass retrieved context to the LLM
+7. Generate grounded response with citations
+
+---
+
+# Guardrails
+
+The system uses prompt-based guardrails to reduce hallucinations.
+
+If the answer is not present in the retrieved context, the assistant refuses the query instead of generating unsupported information.
+
+Example:
+
+```python
+"I could not find the answer in the document."
+```
+
+---
+
+# Example Query
+
+```text
 What is the Transformer architecture?
+```
+
+# Example Output
+
+- Context-aware AI-generated answer
+- Retrieved source information
+- Page citations
+- Hallucination-safe responses
 
 ---
 
-##  Output
+# Future Improvements
 
-Returns the most relevant sections from the document related to the query.
-
----
-
-##  Features
-
-- Efficient document retrieval  
-- Semantic search using embeddings  
-- Scalable pipeline for large documents  
-- Clean and modular workflow  
+- Streamlit UI
+- Multi-PDF support
+- Conversational RAG
+- LangSmith observability
+- Advanced guardrails
 
 ---
 
+# Author
 
-
-##  Author
-
-**Bani Kaur**
-
-
+Bani Kaur
